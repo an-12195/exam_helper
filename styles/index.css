@@ -1,13 +1,11 @@
-body {
-    background: #e5d9f2; 
+* {
+    background:linear-gradient(135deg, #6a11cb, #2575fc);
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    position: relative;
 }
 
 
-.circle {
+.circles > div {
     border-radius: 50%;
     position: absolute;;
     width: 800px;
@@ -15,24 +13,24 @@ body {
     opacity: 0.3;
 }
 
+/* Default (desktop) */
 #one {
     background-color: rgb(136, 90, 186);
     left: -800px;
-    top:-800px;
-    z-index:0;
+    top: -800px;
+    z-index: 0;
 }
 
 #two {
-    left:-750px;
-    top:-750px;
     background-color: yellow;
+    left: -750px;
+    top: -750px;
     z-index: -1;
-
 }
 
 #three {
-    left:-700px;
-    top:-700px;
     background-color: blue;
+    left: -700px;
+    top: -700px;
     z-index: -2;
 }

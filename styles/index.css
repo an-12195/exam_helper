@@ -1,36 +1,40 @@
-* {
-    background:linear-gradient(135deg, #6a11cb, #2575fc);
+body {
+    background: #e5d9f2; 
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    position: relative;
 }
 
 
-.circles > div {
+.circles {
     border-radius: 50%;
-    position: absolute;;
-    width: 800px;
-    height: 800px;
+    position: fixed;
+    width: 1000px;
+    height: 1000px;
     opacity: 0.3;
 }
 
-/* Default (desktop) */
+
 #one {
-    background-color: rgb(136, 90, 186);
+    background-color: #6930c3;
     left: -800px;
     top: -800px;
-    z-index: 0;
+    z-index: -3;
 }
+
 
 #two {
-    background-color: yellow;
+    background-color: #8e7cc3;
     left: -750px;
     top: -750px;
-    z-index: -1;
+    z-index: -2;
 }
 
+
 #three {
-    background-color: blue;
+    background-color: #b8b8ff;
     left: -700px;
     top: -700px;
-    z-index: -2;
+    z-index: -1;
 }

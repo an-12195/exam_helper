@@ -1,18 +1,22 @@
-* {
-    background:linear-gradient(135deg, #6a11cb, #2575fc);
+body {
+    background: #e5d9f2; 
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    position: relative;
 }
+
 
 .circle {
     border-radius: 50%;
-    position: fixed;
-    width: 1000px;
-    height: 1000px;
+    position: absolute;;
+    width: 800px;
+    height: 800px;
+    opacity: 0.3;
 }
 
 #one {
-    background-color: red;
+    background-color: rgb(136, 90, 186);
     left: -800px;
     top:-800px;
     z-index:0;

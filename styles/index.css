@@ -1,20 +1,18 @@
 body {
-    background: #e5d9f2; 
+    background: #e5d9f2;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    position: relative;
+    height: 100vh;
+    font-family: Arial, sans-serif;
 }
 
-
+/* 🎨 Circles: top-left visual elements */
 .circle {
     border-radius: 50%;
     position: absolute;
-    width: 2000px;
-    height: 2000px;
     opacity: 0.3;
 }
-
 
 #one {
     background-color: #6028b8;
@@ -25,7 +23,6 @@ body {
     z-index: -3;
 }
 
-
 #two {
     background-color: #684fb3;
     width: 300px;
@@ -35,7 +32,6 @@ body {
     z-index: -2;
 }
 
-
 #three {
     background-color: #8d5fca;
     width: 200px;
@@ -43,4 +39,74 @@ body {
     top: -100px;
     left: -100px;
     z-index: -1;
+}
+
+/* 🪟 Nav Windows Container */
+.nav-windows {
+    position: fixed;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 400px;
+    z-index: 10;
+    margin:0;
+}
+
+/* ✨ Each Window */
+.nav-windows > div {
+    background-color: white;
+    padding: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex: 1;
+    overflow: auto;
+}
+
+/* 📱 Media Query: Tablets - adjust positioning */
+@media (max-width: 1024px) {
+    #one {
+        top: -150px;  /* Move the largest circle up */
+        left: -150px; /* Move the largest circle to the left */
+    }
+
+    #two {
+        top: -100px;  /* Adjust the second circle */
+        left: -100px;
+    }
+
+    #three {
+        top: -50px;  /* Adjust the third circle */
+        left: -50px;
+    }
+
+    .nav-windows {
+        width: 90%;
+        right: 5%;
+    }
+}
+
+/* 📱 Media Query: Phones - adjust positioning further */
+@media (max-width: 600px) {
+    #one {
+        top: -100px;  /* Move the largest circle further up */
+        left: -100px;
+    }
+
+    #two {
+        top: -50px;  /* Move the second circle up */
+        left: -50px;
+    }
+
+    #three {
+        top: 0px;  /* Move the third circle closer */
+        left: 0px;
+    }
+
+    .nav-windows {
+        width: 95%;
+        right: 2%;
+    }
 }

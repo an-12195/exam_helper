@@ -10,38 +10,37 @@ body {
 .circle {
     border-radius: 50%;
     position: absolute;
-    width: 1000px;
-    height: 1000px;
+    width: 2000px;
+    height: 2000px;
     opacity: 0.3;
 }
 
 
 #one {
     background-color: #6028b8;
-    width: 360px;
-    height: 360px;
-    top: -180px;
-    left: -180px;
+    width: 400px;
+    height: 400px;
+    top: -200px;
+    left: -200px;
     z-index: -3;
 }
 
 
 #two {
     background-color: #684fb3;
-    width: 260px;
-    height: 260px;
-    top: -130px;
-    left: -130px;
+    width: 300px;
+    height: 300px;
+    top: -150px;
+    left: -150px;
     z-index: -2;
 }
 
 
 #three {
     background-color: #8d5fca;
-    width: 160px;
-    height: 160px;
-    top: -80px;
-    left: -80px;
+    width: 200px;
+    height: 200px;
+    top: -100px;
+    left: -100px;
     z-index: -1;
 }
-

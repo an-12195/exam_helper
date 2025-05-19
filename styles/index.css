@@ -41,29 +41,10 @@ body {
     z-index: -1;
 }
 
-/* 🪟 Nav Windows Container */
-.nav-windows {
-    position: fixed;
-    top: 50%;
-    right: 5%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 400px;
-    z-index: 10;
-    margin:0;
+#logo{
+    border-radius: 10px;
 }
 
-/* ✨ Each Window */
-.nav-windows > div {
-    background-color: white;
-    padding: 0;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    flex: 1;
-    overflow: auto;
-}
 
 /* 📱 Media Query: Tablets - adjust positioning */
 @media (max-width: 1024px) {
@@ -82,10 +63,6 @@ body {
         left: -50px;
     }
 
-    .nav-windows {
-        width: 90%;
-        right: 5%;
-    }
 }
 
 /* 📱 Media Query: Phones - adjust positioning further */
@@ -105,8 +82,4 @@ body {
         left: 0px;
     }
 
-    .nav-windows {
-        width: 95%;
-        right: 2%;
-    }
 }

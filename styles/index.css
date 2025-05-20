@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/bg3.jpg");
+  background-image: url("../images/web\ bg.png");
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -45,7 +45,7 @@ body {
     
 }
 
-#logo{ 
+/*#logo{ 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +54,7 @@ body {
     left: 50%;             
     transform: translate(-50%, -50%);
     filter: drop-shadow(8px 8px 4px #282829);
-}
+}*/
 #sclogo{ 
     display: flex;
     align-items: center;

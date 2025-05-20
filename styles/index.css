@@ -49,9 +49,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;    /* Use absolute positioning */
-    top: 50%;              /* Position the container at the center vertically */
-    left: 50%;             /* Position the container at the center horizontally */
+    position: absolute;    
+    top: 50%;              
+    left: 50%;             
     transform: translate(-50%, -50%);
     filter: drop-shadow(8px 8px 4px #282829);
 }
@@ -59,9 +59,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;    /* Use absolute positioning */
-    top: 50%;              /* Position the container at the center vertically */
-    left: 50%;             /* Position the container at the center horizontally */
+    position: absolute;    
+    top: 50%;              
+    left: 50%;             
     transform: translate(-50%, -50%);
     filter: drop-shadow(8px 8px 4px #282829);
 }

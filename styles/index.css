@@ -42,14 +42,29 @@ body {
 }
 
 #logo{ 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;    /* Use absolute positioning */
-  top: 50%;              /* Position the container at the center vertically */
-  left: 50%;             /* Position the container at the center horizontally */
-  transform: translate(-50%, -50%);
-  filter: drop-shadow(8px 8px 4px #282829);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;    /* Use absolute positioning */
+    top: 50%;              /* Position the container at the center vertically */
+    left: 50%;             /* Position the container at the center horizontally */
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(8px 8px 4px #282829);
+}
+#sclogo{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;    /* Use absolute positioning */
+    top: 50%;              /* Position the container at the center vertically */
+    left: 50%;             /* Position the container at the center horizontally */
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(8px 8px 4px #282829);
+}
+#sclogo img {
+  width: 70%;
+  height: auto;
+  transform: translate(-50%, -50%) translateX(90px) translateY(30px);
 }
 
 

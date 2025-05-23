@@ -3,6 +3,8 @@ const cors = require("cors");
 const path = require("path");
 const protectedRoutes = require("./routes/protectedRoutes");
 
+app.use("/api", protectedRoutes);
+
 const app = express();
 
 app.use(cors());

@@ -1,23 +1,13 @@
-const admin = require("../firebaseAdmin.js");
+// routes/protectedRoutes.js
+const express = require("express");
+const router = express.Router();
+const authenticateToken = require("../middleware/authenticateToken"); // path to your middleware
 
-async function authenticateToken(req, res, next) {
-  const authHeader = req.headers.authorization;
-  if (!authHeader) return res.status(401).send("No token provided");
+// Example protected route
+router.get("/profile", authenticateToken, (req, res) => {
+  res.json({ message: "This is a protected route", user: req.user });
+});
 
-  const parts = authHeader.split(" ");
-  if (parts.length !== 2 || parts[0] !== "Bearer") {
-    return res.status(401).send("Malformed token");
-  }
+// Add more protected routes here, all using authenticateToken middleware
 
-  const token = parts[1];
-  try {
-    const decodedToken = await admin.auth().verifyIdToken(token);
-    req.user = decodedToken;
-    next();
-  } catch (error) {
-    console.error("Token verification failed:", error);
-    res.status(401).send("Invalid token");
-  }
-}
-
-module.exports = authenticateToken;
+module.exports = router;

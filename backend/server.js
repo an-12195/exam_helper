@@ -3,12 +3,11 @@ const cors = require("cors");
 const path = require("path");
 const protectedRoutes = require("./routes/protectedRoutes");
 
-app.use("/api", protectedRoutes);
-
 const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use("/api", protectedRoutes);
 
 // Serve API routes
 app.use("/api", protectedRoutes);
@@ -18,7 +17,7 @@ app.use(express.static(path.join(__dirname, "frontend", "build")));
 
 // Handle React routing, return all requests to React app
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
+    res.sendFile(path.join(__dirname, "frontend", "build", "index.html"));
 });
 
 const PORT = process.env.PORT || 5000;

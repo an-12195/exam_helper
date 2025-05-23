@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Path to your secret file
-const serviceAccountPath = '/etc/secrets/firebaseServiceAccount.json';
+const serviceAccountPath = '/etc/secrets/serviceAccountKey.json';
 
 // Read and parse the service account JSON
 const serviceAccount = JSON.parse(fs.readFileSync(serviceAccountPath, 'utf8'));

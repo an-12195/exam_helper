@@ -1,6 +1,6 @@
-import admin from "../firebaseAdmin.js";
+const admin = require("../firebaseAdmin.js");
 
-export async function authenticateToken(req, res, next) {
+async function authenticateToken(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) return res.status(401).send("No token provided");
 
@@ -13,3 +13,5 @@ export async function authenticateToken(req, res, next) {
     res.status(401).send("Invalid token");
   }
 }
+
+module.exports = { authenticateToken };

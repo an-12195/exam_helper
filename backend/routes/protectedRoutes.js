@@ -1,10 +1,15 @@
-import express from "express";
-import { authenticateToken } from "../middleware/authenticateToken.js";
+import admin from "../firebaseAdmin.js";
 
-const router = express.Router();
+export async function authenticateToken(req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) return res.status(401).send("No token provided");
 
-router.get("/profile", authenticateToken, (req, res) => {
-  res.send({ message: `Welcome ${req.user.email}`, user: req.user });
-});
-
-export default router;
+  const token = authHeader.split(" ")[1];
+  try {
+    const decodedToken = await admin.auth().verifyIdToken(token);
+    req.user = decodedToken;
+    next();
+  } catch (error) {
+    res.status(401).send("Invalid token");
+  }
+}

@@ -1,6 +1,6 @@
-import express from "express";
-import cors from "cors";
-import protectedRoutes from "./routes/protectedRoutes.js";
+const express = require("express");
+const cors = require("cors");
+const protectedRoutes = require("./routes/protectedRoutes");
 
 const app = express();
 
